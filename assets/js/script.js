@@ -37,6 +37,24 @@ function getCharacters() {
       alert("Please choose at least one character type");
     }
   }
+
+  let characters = "";
+
+  if (inclLowCase) {
+    characters += lowCase;
+  }
+  if (inclUpCase) {
+    characters += upCase;
+  }
+  if (inclNum) {
+    characters += numbers;
+  }
+  if (inclSym) {
+    characters += symbols;
+  }
+  console.log(characters);
+  return characters;
+}
 }
 
 // Get references to the #generate element
