@@ -14,6 +14,10 @@ function getLength() {
   return length;
 }
 
+const lowCase = "abcdefghijklmnopqrstuvwxyz";
+const upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numbers = "1234567890";
+const symbols = "^!$%&|[](){}:;.,*+-#@<>~";
 
 
 // Get references to the #generate element
