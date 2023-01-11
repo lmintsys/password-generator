@@ -19,6 +19,25 @@ const upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numbers = "1234567890";
 const symbols = "^!$%&|[](){}:;.,*+-#@<>~";
 
+function getCharacters() {
+  let inclLowCase;
+  let inclUpCase;
+  let inclNum;
+  let inclSym;
+
+  while (true) {
+    inclLowCase = confirm("Should your password include lowercase characters?");
+    inclUpCase = confirm("Should your password include uppercase characters?");
+    inclNum = confirm("Should your password include numbers?");
+    inclSym = confirm("Should your password include special characters?");
+
+    if (inclLowCase || inclUpCase || inclNum || inclSym) {
+      break;
+    } else {
+      alert("Please choose at least one character type");
+    }
+  }
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
