@@ -55,6 +55,18 @@ function getCharacters() {
   console.log(characters);
   return characters;
 }
+
+function generatePassword() {
+  const length = getLength();
+  const characters = getCharacters();
+
+  let password = "";
+  for (let i = 0; i < length; i++) {
+    password += characters.charAt(
+      Math.floor(Math.random() * characters.length)
+    );
+  }
+  return password;
 }
 
 // Get references to the #generate element
