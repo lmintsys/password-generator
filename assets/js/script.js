@@ -1,8 +1,9 @@
+//
 function getLength() {
   let length;
 
   while (true) {
-    length = parseInt(prompt("What would be the length of your password?"));
+    length = parseInt(prompt("Enter the length of your password:"));
 
     if (Number.isInteger(length) && length >= 8 && length <= 128) {
       break;
@@ -78,7 +79,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
