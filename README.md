@@ -12,6 +12,7 @@ n/a
 ## Usage
 
 A user can press the red "Generate Password" button and will be prompted to choose the length for their password. If the input will be shorter than 8 and longer than 128 characters, and if it will include characters other than numbers, the user will be asked to enter a valid length. Next, the user will be prompted to choose at least one of the following options for the characters type: uppercase letters, lowercase letters, numbers, and symbols. If none of the types will be chosen, an alert will appear asking to choose at least one type. Finally, the generated password will be shown in the main text field.
+https://lmintsys.github.io/password-generator/
 ![main](assets/images/main.jpg)
 ![length](assets/images/length.jpg)
 ![lowercase](assets/images/lowercase.jpg)
