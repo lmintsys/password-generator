@@ -56,7 +56,7 @@ function getCharacters() {
   if (inclSym) {
     characters += symbols;
   }
-  console.log(characters);
+
   return characters;
 }
 // Generate a secure password based on criteria chosen by user
