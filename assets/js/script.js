@@ -1,6 +1,6 @@
 //
 function getLength() {
-  let length;
+  var length;
 
   while (true) {
     length = parseInt(prompt("Enter the length of your password:"));
@@ -15,16 +15,16 @@ function getLength() {
   return length;
 }
 
-const lowCase = "abcdefghijklmnopqrstuvwxyz";
-const upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const numbers = "1234567890";
-const symbols = "^!$%&|[](){}:;.,*+-#@<>~";
+var lowCase = "abcdefghijklmnopqrstuvwxyz";
+var upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "1234567890";
+var symbols = "^!$%&|[](){}:;.,*+-#@<>~";
 
 function getCharacters() {
-  let inclLowCase;
-  let inclUpCase;
-  let inclNum;
-  let inclSym;
+  var inclLowCase;
+  var inclUpCase;
+  var inclNum;
+  var inclSym;
 
   while (true) {
     inclLowCase = confirm("Should your password include lowercase characters?");
@@ -39,7 +39,7 @@ function getCharacters() {
     }
   }
 
-  let characters = "";
+  var characters = "";
 
   if (inclLowCase) {
     characters += lowCase;
@@ -58,11 +58,11 @@ function getCharacters() {
 }
 
 function generatePassword() {
-  const length = getLength();
-  const characters = getCharacters();
+  var length = getLength();
+  var characters = getCharacters();
 
-  let password = "";
-  for (let i = 0; i < length; i++) {
+  var password = "";
+  for (var i = 0; i < length; i++) {
     password += characters.charAt(
       Math.floor(Math.random() * characters.length)
     );
