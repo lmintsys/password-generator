@@ -1,10 +1,11 @@
-//
+// Get the length of the password from the user's input
 function getLength() {
   var length;
 
   while (true) {
     length = parseInt(prompt("Enter the length of your password:"));
 
+    // Validate that the password contains only numbers and is between 8 and 128 characters
     if (Number.isInteger(length) && length >= 8 && length <= 128) {
       break;
     }
@@ -14,12 +15,13 @@ function getLength() {
 
   return length;
 }
-
+// Declare characters for each character type
 var lowCase = "abcdefghijklmnopqrstuvwxyz";
 var upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "1234567890";
 var symbols = "^!$%&|[](){}:;.,*+-#@<>~";
 
+// Get the characters from user's input
 function getCharacters() {
   var inclLowCase;
   var inclUpCase;
@@ -32,13 +34,14 @@ function getCharacters() {
     inclNum = confirm("Should your password include numbers?");
     inclSym = confirm("Should your password include special characters?");
 
+    // Validate that at least one character type is chosen
     if (inclLowCase || inclUpCase || inclNum || inclSym) {
       break;
     } else {
       alert("Please choose at least one character type");
     }
   }
-
+  // Add the chosen characters to one string in the "characters" variable
   var characters = "";
 
   if (inclLowCase) {
@@ -56,7 +59,7 @@ function getCharacters() {
   console.log(characters);
   return characters;
 }
-
+// Generate a secure password based on criteria chosen by user
 function generatePassword() {
   var length = getLength();
   var characters = getCharacters();
